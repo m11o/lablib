@@ -1,6 +1,8 @@
 from sqlalchemy import Table, Column, Integer, String, Boolean, Float, create_engine, MetaData, DECIMAL, DATETIME
 
-url = 'mysql+pymysql://root:@172.20.0.2:3306/lablib_db?charset=utf8'
+import fluorine.constant as const
+
+url = const.DATABASE_URL
 engine = create_engine(url)
 meta = MetaData(engine)
 

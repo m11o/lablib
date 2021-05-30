@@ -9,7 +9,7 @@ services:
       - db
     networks:
       app_net:
-        ipv4_address: '172.20.0.1'
+        ipv4_address: '172.20.0.3'
 
   db:
     image: mysql:5.7.30

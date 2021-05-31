@@ -1,7 +1,7 @@
 import pandas as pd
 import re
 
-import fluorine.constant as const
+import utils.constant as const
 
 
 class SeparateTiming:

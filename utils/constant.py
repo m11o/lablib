@@ -7,4 +7,4 @@ CONTEXTS = [
     'A3_1', 'A3_2', 'B1', 'HC4', 'A4preES', 'A4postES', 'HC5', 'HC6', 'A5', 'B2'
 ]
 
-DATABASE_URL = 'mysql+pymysql://root:@172.20.0.2:3306/lablib_db?charset=utf8'
+

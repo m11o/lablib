@@ -1,7 +1,5 @@
 numpy
 pandas
 matplotlib
-xlrd
-openpyxl
-PyMySQL
-sqlalchemy
+scipy
+cython

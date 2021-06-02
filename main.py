@@ -1,7 +1,6 @@
 import utils.constant as const
-import fluorine.separate_timings as st
 
-import fluorine.insert_data as idata
+import sulfur.insert_data as idata
 
 if __name__ == "__main__":
     for animal in const.ANIMAL_NUMBERS:

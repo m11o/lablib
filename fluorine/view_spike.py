@@ -3,7 +3,6 @@ from sys import path
 path.append('/app')
 path.append('/app/OASIS')
 
-import numpy as np
 import pandas as pd
 
 from matplotlib import pyplot as plt
@@ -21,7 +20,7 @@ cell_data = cell_data / std
 
 cell_data = cell_data.to_numpy()
 
-c, s, b, g, lam = deconvolve(cell_data, g=(None, None), penalty=0)
+c, s, b, g, lam = deconvolve(cell_data, g=(None, None), penalty=1)
 
 plt.figure(figsize=(20, 4))
 plt.subplot(211)

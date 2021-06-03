@@ -1,6 +1,15 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
+
+def label_diff(x, y, text, offset=0.0, width_diff=0.125):
+    props = {'connectionstyle': 'bar', 'arrowstyle': '-',
+             'shrinkA': 20, 'shrinkB': 20, 'linewidth': 2}
+
+    plt.annotate(text, xy=(x, y + 3.5 + offset), zorder=10, horizontalalignment='center')
+    plt.annotate('', xy=(x - width_diff, y), xytext=(x + width_diff, y), arrowprops=props)
+
+
 plt.rcParams["font.size"] = 22
 
 labels = np.array(['1h', '24h'])
@@ -27,5 +36,13 @@ plt.xlim(-0.5, 1.5)
 ax.set_ylabel('Freezing Rate(%)')
 ax.legend()
 
+label_diff(-0.125, freezing_rate_Ret[0] + error_Ret[0], '**')
+label_diff(0.125, freezing_rate_EM[0] + error_EM[0], 'n.s.', offset=1.0)
+label_diff(0, freezing_rate_Ret[0] + error_Ret[0], '*', width_diff=0.25, offset=4)
+
+label_diff(0.875, freezing_rate_Ret[1] + error_Ret[1], '**')
+label_diff(1.125, freezing_rate_EM[1] + error_EM[1], 'n.s.', offset=1.0)
+label_diff(1, freezing_rate_Ret[1] + error_Ret[1], '*', width_diff=0.25, offset=4)
+
 plt.tight_layout()
-plt.savefig('[fluorine]FreezingRateFigure.png')
+plt.savefig('results/fluorine/FreezingRateFigure-Ret-EXT-EM.png')
